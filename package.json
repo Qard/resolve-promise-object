@@ -1,0 +1,26 @@
+{
+  "name": "resolve-promise-object",
+  "version": "0.0.1",
+  "description": "Recursively resolve any promises in an object to form a resulting JSON structure",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -r should -G -R spec",
+    "generate-coverage": "rm -rf coverage && istanbul cover _mocha -- -r should -G -R spec",
+    "coverage-html": "npm run generate-coverage && open coverage/lcov-report/index.html",
+    "coverage": "npm run generate-coverage && istanbul report"
+  },
+  "keywords": [
+    "promise",
+    "object",
+    "resolve",
+    "json"
+  ],
+  "author": "Stephen Belanger <admin@stephenbelanger.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "~1.17.0",
+    "q": "~1.0.0",
+    "should": "~2.1.1",
+    "istanbul": "~0.2.3"
+  }
+}
