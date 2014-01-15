@@ -13,7 +13,7 @@ describe('promise resolution', function () {
       done()
     })
 
-    setImmediate(function () {
+    process.nextTick(function () {
       p.resolve('foo')
     })
   })
@@ -29,7 +29,7 @@ describe('promise resolution', function () {
       done()
     })
 
-    setImmediate(function () {
+    process.nextTick(function () {
       p.resolve('bar')
     })
   })
@@ -46,7 +46,7 @@ describe('promise resolution', function () {
       done()
     })
 
-    setImmediate(function () {
+    process.nextTick(function () {
       p.resolve('baz')
     })
   })
@@ -66,10 +66,10 @@ describe('promise resolution', function () {
       done()
     })
 
-    setImmediate(function () {
+    process.nextTick(function () {
       p1.resolve('bar')
 
-      setImmediate(function () {
+      process.nextTick(function () {
         p2.resolve('buz')
       })
     })
@@ -90,17 +90,17 @@ describe('promise resolution', function () {
       done()
     })
 
-    setImmediate(function () {
+    process.nextTick(function () {
       p1.resolve({
         bar: p2.promise
       })
 
-      setImmediate(function () {
+      process.nextTick(function () {
         p2.resolve({
           baz: p3.promise
         })
 
-        setImmediate(function () {
+        process.nextTick(function () {
           p3.resolve('buz')
         })
       })
@@ -120,7 +120,7 @@ describe('graceful rejection', function () {
       done()
     })
 
-    setImmediate(function () {
+    process.nextTick(function () {
       p.reject('foo')
     })
   })
@@ -138,10 +138,10 @@ describe('graceful rejection', function () {
       done()
     })
 
-    setImmediate(function () {
+    process.nextTick(function () {
       p1.resolve('bar')
 
-      setImmediate(function () {
+      process.nextTick(function () {
         p2.reject('baz')
       })
     })
