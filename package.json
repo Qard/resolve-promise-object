@@ -1,6 +1,6 @@
 {
   "name": "resolve-promise-object",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Recursively resolve any promises in an object to form a resulting JSON structure",
   "main": "index.js",
   "scripts": {
