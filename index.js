@@ -3,7 +3,7 @@ module.exports = resolve
 function resolve (object, callback) {
   // If the property is not an object,
   // it needs no further processing.
-  if ( ! isObject(object)) {
+  if (object === null || !isObject(object)) {
     return callback(null, object)
   }
 
