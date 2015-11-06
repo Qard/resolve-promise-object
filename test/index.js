@@ -107,6 +107,48 @@ describe('promise resolution', function () {
     })
   })
 
+  if (typeof Promise !== "undefined") {
+    it('should work with native promises', function (done) {
+      var p = new Promise(function(resolve, reject) {
+        process.nextTick(function () {
+          resolve('bar')
+        })
+      })
+
+      resolver({
+        foo: p
+      }, function (err, res) {
+        if (err) return done(err)
+        res.should.have.property('foo', 'bar')
+        done()
+      })
+    })
+  }
+
+  it('should return a promise', function () {
+    var p = Q.defer()
+
+    var res = resolver(p.promise)
+
+    res.should.have.property('then')
+    res.then.should.be.instanceof(Function)
+  })
+
+  it('should work without a callback', function (done) {
+    var p = Q.defer()
+
+    resolver({
+      foo: p.promise
+    }).then(function (res) {
+      res.should.have.property('foo', 'bar')
+      done()
+    }).catch(done)
+
+    process.nextTick(function () {
+      p.resolve('bar')
+    })
+  })
+
 })
 
 describe('graceful rejection', function () {

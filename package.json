@@ -22,5 +22,8 @@
     "q": "~1.0.0",
     "should": "~2.1.1",
     "istanbul": "~0.2.3"
+  },
+  "dependencies": {
+    "promise": "^7.0.4"
   }
 }
