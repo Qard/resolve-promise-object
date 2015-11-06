@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Recursively resolve any promises in an object to form a resulting JSON structure",
   "main": "index.js",
+  "repo": "https://github.com/Qard/resolve-promise-object",
   "scripts": {
     "test": "mocha -r should -G -R spec",
     "generate-coverage": "rm -rf coverage && istanbul cover _mocha -- -r should -G -R spec",
