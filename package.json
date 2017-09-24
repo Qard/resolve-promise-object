@@ -19,12 +19,12 @@
   "author": "Stephen Belanger <admin@stephenbelanger.com>",
   "license": "MIT",
   "devDependencies": {
-    "mocha": "~1.17.0",
-    "q": "~1.0.0",
-    "should": "~2.1.1",
-    "istanbul": "~0.2.3"
+    "mocha": "~3.5.3",
+    "q": "~1.5.0",
+    "should": "~13.1.0",
+    "istanbul": "~0.4.5"
   },
   "dependencies": {
-    "promise": "^7.0.4"
+    "promise": "^8.0.1"
   }
 }
