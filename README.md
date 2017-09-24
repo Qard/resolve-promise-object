@@ -1,4 +1,6 @@
 # resolve-promise-object
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Qard/resolve-promise-object.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/Qard/resolve-promise-object.png)](https://travis-ci.org/Qard/resolve-promise-object)
 
 Easily resolve an object full of promises, or even recursively construct an object made of promises.
