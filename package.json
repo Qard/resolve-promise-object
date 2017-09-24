@@ -1,6 +1,6 @@
 {
   "name": "resolve-promise-object",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Recursively resolve any promises in an object to form a resulting JSON structure",
   "main": "index.js",
   "repo": "https://github.com/Qard/resolve-promise-object",
